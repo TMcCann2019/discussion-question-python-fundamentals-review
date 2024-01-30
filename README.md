@@ -16,6 +16,9 @@ def greet(name):
 greet("Steven") #=> ?
 ```
 
+"Hello Steven"
+returns nothing
+
 2 . What does this function return?
 
 ```python
@@ -25,18 +28,27 @@ def love_this_veggie(vegetable):
   else:
     return "I love it!"
 ```
+If the vegetable is broccoli, it will return Nah, thanks. Otherwise it will return I love it
 
 3 . How would you produce a new list all of the words that start with the letter "a" from the below list?
 
 ```python
 fruit = ["apple", "pear", "face", "champagne", "palm tree", "aardvark", "pineapple"]
+
+a_words = [word for word in fruit if word.startswith("a")]
 ```
 
 4 . Write a function that takes in an argument of a sentence and returns the
 number of words in the sentence
 
 ```python
+
+def word_count(sentence):
+  return len(sentence.split(" "))
+  pass
+
 word_count("Hi, isn't this a great and interesting sentence??")
+
  # => 8
 ```
 
@@ -48,6 +60,8 @@ def friendly_greeting(name=None):
   print(f"Hey there, {name}")
 ```
 
+Will return an error since name = None and wont return anything as there is no return
+
 6 . What will the following `print`?
 
 ```python
@@ -56,6 +70,7 @@ favorite_animal = best_animal
 print(favorite_animal)
 # => ?
 ```
+"Cat"
 
 7 . What will the following `print`?
 
@@ -68,12 +83,15 @@ best_animal = my_favorite_animal
 
 print(best_animal)
 ```
+will print my_favorite_animal since best_animal is not equal to the function of my_favorite_animal
 
 8 . What error, if any, will the following code raise?
 
 ```python
 "Blink" + 182
 ```
+
+Type Error since you cant concatenate a string with integers
 
 9 . How would you `print` out any and all foods that are delicious?
 
@@ -99,6 +117,7 @@ def downcase_all(list_of_strings):
     one_string.lower()
   
 ```
+wont return anything as doesnt have an return function but if you do return one_string.lower() it will return everything lower cased
 
 12 . Write a function that `print`s out a random Agent Cooper quote.
 
